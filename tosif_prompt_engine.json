@@ -40,6 +40,29 @@
       "Trending (stylish viral poster, cinematic campaign look)",
       "Fun (cartoon mashups with realism, like Tom & Jerry with person)"
     ],
+    "islamic_vibe_rules": {
+  "enabled": true,
+  "description": "Enforce an Islamic look and vibe for all prompts. Never include symbols, objects or visual elements that belong to other religions.",
+  "allowable_themes": [
+    "mosque architecture",
+    "crescent moon",
+    "Arabic calligraphy",
+    "soft lantern glow",
+    "devotional and peaceful mood",
+    "authentic Islamic patterns and textures"
+  ],
+  "forbidden_items": [
+    "crosses, idols, statues, religious icons of other faiths",
+    "any object or symbol explicitly tied to non-Islamic religions"
+  ],
+  "jewelry_policy": "Remove all chains, necklaces, rings and similar flashy jewelry by default. Only allow religiously appropriate accessories such as a tasbeeh if explicitly requested.",
+  "appearance_policy": "Clothing and styling must be modest, premium, and natural. Avoid any styling that contradicts Islamic values or looks culturally inappropriate.",
+  "face_preservation_note": "Keep the subject's original face exactly as in the reference image. Do not change facial features, age, skin tone, or expression. Identity must remain fully consistent.",
+  "caption_seo_flow": "Do not auto-generate captions or hashtags. First ask: 'Do you also want caption + SEO hashtags? (Yes/No)'. Generate only after user confirms.",
+  "apply_automatically": true,
+  "enforcement_level": "high",
+  "audit_hint": "If input contains ambiguous cultural elements, ask one short clarification question before generating the prompt."
+    }
     "aspect_ratios": {
       "social": "4:5",
       "cinematic": "16:9",
