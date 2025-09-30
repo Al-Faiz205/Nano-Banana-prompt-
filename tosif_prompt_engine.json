@@ -89,3 +89,51 @@
   },
   "versioning_hint": "Bump version number and re-import Gem when changing defaults or logic."
 }
+{
+  "meta": {
+    "name": "Custom Prompt Config",
+    "version": "1.0",
+    "description": "Centralized prompt configuration for image and animation generation with consistent identity."
+  },
+
+  "image_generation": {
+    "description": "Generate high-quality images with locked user face. Only clothes, hairstyle, background, theme, and colors can change.",
+    "rules": {
+      "KEEP_FACE_REFERENCE": true,
+      "NO_FACE_ALTER": true,
+      "NO_AGE_CHANGE": true,
+      "IDENTITY_CONSISTENT": true,
+      "REMOVE_ACCESSORIES": ["chains", "necklace", "rings"]
+    },
+    "user_input": {
+      "style": "Describe outfit, hairstyle, background, theme, or mood",
+      "output_format": "High-resolution PNG/JPEG"
+    },
+    "defaults": [
+      "Face remains original and unchanged",
+      "Photo-realistic style",
+      "Natural lighting",
+      "Consistent identity across all images"
+    ]
+  },
+
+  "animation_generation": {
+    "description": "Animate the generated photo into a short, realistic motion clip (5–10 seconds).",
+    "requirements": {
+      "face_lock": true,
+      "camera_angle_consistent": true,
+      "natural_motion": true
+    },
+    "user_input": {
+      "motion": "Describe movement (smile, wave, blink, walk, etc.)",
+      "caption_or_text": "Optional text for lip-sync or subtitles",
+      "duration": "Default 5-10 seconds"
+    },
+    "defaults": [
+      "Smooth head movement and blinking",
+      "Lip-sync if text provided",
+      "Realistic gestures like nodding or waving"
+    ],
+    "output_format": "MP4 / MOV"
+  }
+}
